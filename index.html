@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anand Kumar | Cybersecurity Specialist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>&lt;AK/&gt;</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.pdf" download>Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="intro" data-aos="fade-up">
+    <div class="intro-content">
+      <div class="intro-text">
+        <h2>Hi, my name is</h2>
+        <p class="glitch" data-text="Anand Kumar">Anand Kumar</p>
+        <p class="hero-desc">Cybersecurity Specialist with expertise in network security, penetration testing, and digital forensics. Currently serving as the lead for <a href="http://cyber-hub.in" target="_blank" class="site-link">Cyber Hub DSEU Club</a>, where I contribute to building a stronger security community.</p>
+        
+        <div class="bio-highlight">
+          <div class="bio-item">
+            <i class="fa-solid fa-calendar"></i>
+            <span>02/07/2003</span>
+          </div>
+          <div class="bio-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Based in India</span>
+          </div>
+          <div class="bio-item">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>BCA Student</span>
+          </div>
+          <div class="bio-item">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Founder & CEO at <a href="https://www.linkedin.com/company/mistrig" target="_blank" class="site-link">MistriG</a></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-image-container">
+        <div class="profile-image">
+          <img src="img/profile.jpg" alt="Anand Kumar - Cybersecurity Specialist" />
+        </div>
+      </div>
+    </div>
+
+    <div class="terminal-box">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <div class="terminal-dot"></div>
+          <div class="terminal-dot"></div>
+          <div class="terminal-dot"></div>
+        </div>
+        <div class="terminal-title">anand@cyberhub:~</div>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-prompt">whoami</div>
+        <p>Ethical Hacker | Programmer | Founder | Data Science Expert | CEH Certified</p>
+        <div class="terminal-prompt">cat career_objective.txt</div>
+        <p>- To build MistriG into India's leading service platform</p>
+        <p>- To spread digital awareness and safety</p>
+        <p>- To build platforms for social impact</p>
+        <p>- To provide solutions via ethical tech</p>
+        <div class="terminal-prompt">ls -la skills/</div>
+        <p>drwxr-xr-x  2 anand cybersec 4.0K Jun 15 2023 penetration-testing/</p>
+        <p>drwxr-xr-x  2 anand cybersec 4.0K Jun 10 2023 network-security/</p>
+        <p>drwxr-xr-x  2 anand cybersec 4.0K May 22 2023 malware-analysis/</p>
+        <p>drwxr-xr-x  2 anand cybersec 4.0K Apr 30 2023 artificial-intelligence/</p>
+      </div>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="projects.html" class="cta-button primary">View My Projects <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="contact.html" class="cta-button secondary">Get In Touch <i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://github.com/cyberhub-dseu" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/anandk.2" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/live/fxEXDoomEYI?si=-MpJGV2EKUGcfWIW" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/anand-kumar-72014026a" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:anand971144@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p>&copy; 2025 Anand Kumar. Built with <i class="fa-solid fa-code"></i> and <i class="fa-solid fa-shield-halved"></i></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false,
+      mirror: true
+    });
+    
+    // Simple typewriter effect
+    const typewriterElement = document.querySelector('.typewriter');
+    const phrases = ["Cybersecurity Specialist", "Ethical Hacker", "AI Enthusiast", "Founder of MistriG"];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeEffect() {
+      const currentPhrase = phrases[phraseIndex];
+      
+      if (isDeleting) {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+      }
+      
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1500);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(typeEffect, 500);
+      } else {
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+      }
+    }
+    
+    setTimeout(typeEffect, 1000);
+  </script>
+</body>
+</html>

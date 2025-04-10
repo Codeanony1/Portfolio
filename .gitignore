@@ -1,0 +1,21 @@
+# VS Code files
+.vscode/
+.vs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Images placeholder until real ones are added
+img/profile.jpg 
